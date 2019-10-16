@@ -32,10 +32,31 @@ if (isset($_POST['sbm'])) {
 }
 echo "<center> Hasil Penggajian </center><br>";
 $pegawai = new Gaji($nama, $nip, $alamat, $jml_kerja);
-echo "Nama        : " . $nama  . "<br>";
-echo "Nip         : " . $nip   . "<br>";
-echo "Alamat      : " . $alamat. "<br>";
-echo "Jumlah Hari Kerja : " . $jml_kerja . "<br>";
-echo "Gaji Kotor  : " . $pegawai->Gaji_kotor()."<br>";
-echo "Gaji Bersih : " . $pegawai->Gaji_bersih()."<br>";
+echo "
+<table>
+    <tr>
+        <th> Nama </th>
+        <td> : $nama </td>
+    </tr>
+     <tr>
+        <th> Nip </th>
+        <td> : $nip </td>
+    </tr>
+     <tr>
+        <th> Alamat </th>
+        <td> : $alamat t</td>
+    </tr>
+    <tr>
+        <th> Jumlah Hari Kerja </th>
+        <td> : $jml_kerja </td>
+    </tr>
+    <tr>
+        <th> Gaji Kotor </th>
+        <td> : ".$pegawai->Gaji_kotor()." </td>
+    </tr>
+    <tr>
+        <th> Gaji Bersih </th>
+        <td> : ".$pegawai->Gaji_bersih()." </td>
+    </tr>
+    </table>";
 ?>
